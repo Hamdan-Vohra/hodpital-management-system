@@ -4,8 +4,13 @@ import streamlit as st
 
 def plot_patient_statistics(patient_data):
     df = pd.DataFrame(patient_data)
+    if df.empty:
+        st.info("No patient statistics available.")
+        return
     st.subheader("Patient Statistics")
-    st.bar_chart(df['count'], x=df['category'])
+    # st.bar_chart(df['count'], x=df['category'])
+    st.bar_chart(df, x="category", y="count")
+    
 
 def plot_appointment_trends(appointment_data):
     df = pd.DataFrame(appointment_data)
