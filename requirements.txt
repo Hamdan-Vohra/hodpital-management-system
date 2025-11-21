@@ -1,0 +1,10 @@
+streamlit
+sqlalchemy
+pandas
+cryptography
+python-dotenv
+flask-login
+flask-sqlalchemy
+matplotlib
+numpy
+pytest
